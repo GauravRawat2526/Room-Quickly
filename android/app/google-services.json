@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "706761910085",
+    "project_id": "roomonclick-18188",
+    "storage_bucket": "roomonclick-18188.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706761910085:android:048e11377f24491a33c02c",
+        "android_client_info": {
+          "package_name": "com.example.room_quickly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706761910085-7lvs9ckuabmutopnib4i90fkuks0ar32.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZGNoEsBtwTS3sNu1P7QdnrngvXqpjpK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706761910085-7lvs9ckuabmutopnib4i90fkuks0ar32.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
