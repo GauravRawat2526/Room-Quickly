@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "706761910085",
-    "project_id": "roomonclick-18188",
-    "storage_bucket": "roomonclick-18188.appspot.com"
+    "project_number": "253976709130",
+    "project_id": "room-quickly-c0d54",
+    "storage_bucket": "room-quickly-c0d54.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:706761910085:android:048e11377f24491a33c02c",
+        "mobilesdk_app_id": "1:253976709130:android:2500ca35f38f2d93a5b7f3",
         "android_client_info": {
           "package_name": "com.example.room_quickly"
         }
       },
       "oauth_client": [
         {
-          "client_id": "706761910085-7lvs9ckuabmutopnib4i90fkuks0ar32.apps.googleusercontent.com",
+          "client_id": "253976709130-08s98dct8q823po5fhqikm5qgpk00r9a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.room_quickly",
+            "certificate_hash": "85b89feffe4cfb9ab7ebce1cb955476ce17c5318"
+          }
+        },
+        {
+          "client_id": "253976709130-lmi6bm2er7647lfrc5plhhpmmqkb8kte.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCZGNoEsBtwTS3sNu1P7QdnrngvXqpjpK4"
+          "current_key": "AIzaSyA65scni9NGU9H3lyI8YTFyM5JJhIvsOYg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "706761910085-7lvs9ckuabmutopnib4i90fkuks0ar32.apps.googleusercontent.com",
+              "client_id": "253976709130-lmi6bm2er7647lfrc5plhhpmmqkb8kte.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
