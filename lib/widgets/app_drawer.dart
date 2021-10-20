@@ -41,6 +41,20 @@ class AppDrawer extends StatelessWidget {
             color: Colors.black,
           ),
           ListTile(
+            leading: Icon(
+              Icons.add_business_outlined,
+              color: Theme.of(context).primaryColor,
+            ),
+            title: Text("Add hostel/pg/Rooms"),
+            trailing: Icon(
+              Icons.keyboard_arrow_right,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
             leading: Icon(Icons.logout, color: Theme.of(context).primaryColor),
             title: Text('Logout'),
             onTap: () {
