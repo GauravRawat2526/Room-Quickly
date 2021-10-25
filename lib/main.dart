@@ -71,7 +71,7 @@ class _RoutingScreenState extends State<RoutingScreen> {
     super.initState();
     checkUser();
   }
-
+  
   checkUser() async {
     await Future.delayed(Duration(seconds: 1));
     print(FirebaseAuth.instance.currentUser);
