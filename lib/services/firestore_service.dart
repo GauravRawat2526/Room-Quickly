@@ -16,14 +16,28 @@ class FireStoreService {
         .set({'userName': userName});
   }
 
-  static Future addUser(String userName, String aboutUser, String fullName,
-      String imagePath) async {
+  // static Future addUser(String userName, String aboutUser, String fullName,
+  //     String imagePath) async {
+  //   print(imagePath);
+  //   _firestore.collection('users').doc(userName).set({
+  //     'userName': userName,
+  //     'aboutUser': aboutUser,
+  //     'name': fullName,
+  //     'imageUrl': imagePath
+  //   });
+  // }
+  
+  static Future addUser(String userName, String emailUser, String fullName,
+      String address, String upidName, String phoneNumber, String imagePath) async {
     print(imagePath);
     _firestore.collection('users').doc(userName).set({
       'userName': userName,
-      'aboutUser': aboutUser,
+      'email': emailUser,
       'name': fullName,
-      'imageUrl': imagePath
+      'address': address,
+      'upid' : upidName,
+      'imageUrl': imagePath,
+      'phoneNumber': phoneNumber
     });
   }
 

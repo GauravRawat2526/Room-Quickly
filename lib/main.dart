@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:room_quickly/screens/loadingScreen.dart';
 import 'package:room_quickly/screens/login_screen.dart';
 import 'package:room_quickly/screens/onboarding_screen.dart';
+import 'package:room_quickly/services/blocs.dart';
 import 'models/user_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => UserData()),
+        Provider(create: (_) => Blocs())
       ],
       child: MaterialApp(
         title: 'Room Quickly',
