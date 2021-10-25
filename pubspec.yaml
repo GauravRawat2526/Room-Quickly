@@ -3,7 +3,7 @@ description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none' # Remove this git line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -28,17 +28,24 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  transparent_image: ^2.0.0
   firebase_core: ^1.1.0
-  provider: ^5.0.0
-  flutter_spinkit: "^4.1.2"
-  curved_navigation_bar: ^0.3.7
-  firebase_auth:
+  firebase_auth: 
   pin_code_fields: ^7.1.0
-  cloud_firestore: ^2.1.0
-  firebase_storage: ^8.0.6
   material_design_icons_flutter: ^4.0.5955
-  image_picker: ^0.7.5
+  cloud_firestore: ^2.1.0
+  firebase_database: ^6.1.2
+  flutter_spinkit: "^4.1.2"
+  fluttertoast: ^8.0.6
+  toast: ^0.1.5
+  curved_navigation_bar: ^0.3.7
+  firebase_storage: ^8.0.6
   rxdart: ^0.24.0
+  provider: ^5.0.0
+  intl: ^0.17.0
+  permission_handler: ^8.0.0+1
+  photo_view: ^0.11.1
+  image_picker: ^0.8.3+1
   url_launcher: 
 
 dev_dependencies:
