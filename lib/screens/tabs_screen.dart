@@ -3,6 +3,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:room_quickly/models/user_data.dart';
 import 'package:room_quickly/screens/add_rooms.dart';
+import 'package:room_quickly/screens/chat_screen.dart';
 import 'package:room_quickly/screens/pg_hostel_screen.dart';
 import '../widgets/app_drawer.dart';
 import '../services/firestore_service.dart';
@@ -26,6 +27,9 @@ class _TabsScreenState extends State<TabsScreen> {
       {'screen': AddRoom(), 'name': 'RoomsScreen'},
       // {'screen': SearchScreen(), 'name': 'Favourites'},
      // {'screen': AddRoom(), 'name': 'StatusScreen'},
+      {'screen': RoomsScreen(), 'name': 'RoomsScreen'},
+      {'screen': ChatScreen(), 'name': 'ChatScreen'},
+      // {'screen': StatusScreen(), 'name': 'StatusScreen'},
     ];
     getUserName().then((userName) {
       print(userName);
@@ -79,14 +83,28 @@ class _TabsScreenState extends State<TabsScreen> {
           color: Theme.of(context).primaryColor,
           backgroundColor: Colors.white,
           items: [
+            Tab(
+              icon: Image.asset(
+                "assets/images/hostel.png",
+                height: 30,
+                color: Colors.white,
+              ),
+            ),
+            Tab(
+              icon: Image.asset(
+                "assets/images/room.png",
+                height: 30,
+                color: Colors.white,
+              ),
+            ),
             Icon(
               MdiIcons.commentTextMultiple,
               color: Colors.white,
             ),
-            Icon(
-              Icons.group,
-              color: Colors.white,
-            ),
+            // Icon(
+            //   Icons.group,
+            //   color: Colors.white,
+            // ),
             //   Icon(
             //     MdiIcons.magnify,
             //     color: Colors.white,
