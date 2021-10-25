@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:room_quickly/models/user_data.dart';
+import 'package:room_quickly/screens/add_rooms.dart';
 import 'package:room_quickly/screens/pg_hostel_screen.dart';
-import 'package:room_quickly/screens/rooms_screen.dart';
 import '../widgets/app_drawer.dart';
 import '../services/firestore_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -24,9 +23,9 @@ class _TabsScreenState extends State<TabsScreen> {
   void initState() {
     _scrAndName = [
       {'screen': PgHostelScreen(), 'name': 'PgHostelScreen'},
-      {'screen': RoomsScreen(), 'name': 'RoomsScreen'},
+      {'screen': AddRoom(), 'name': 'RoomsScreen'},
       // {'screen': SearchScreen(), 'name': 'Favourites'},
-      // {'screen': StatusScreen(), 'name': 'StatusScreen'},
+     // {'screen': AddRoom(), 'name': 'StatusScreen'},
     ];
     getUserName().then((userName) {
       print(userName);
@@ -35,7 +34,9 @@ class _TabsScreenState extends State<TabsScreen> {
             userData['userName'],
             userData['name'],
             userData['imageUrl'],
-            userData['phoneNumber']);
+            userData['phoneNumber'],
+            userData['email'],
+            userData['upid']);
         setState(() {
           isLoading = false;
         });
@@ -72,7 +73,7 @@ class _TabsScreenState extends State<TabsScreen> {
       drawer: isLoading ? null : AppDrawer(),
       body: isLoading
           ? SpinKitWave(color: Theme.of(context).primaryColor)
-          : _scrAndName[_selectedPageIndex]['screen'],
+          :_scrAndName[_selectedPageIndex]['screen'],
       bottomNavigationBar: CurvedNavigationBar(
           index: _selectedPageIndex,
           color: Theme.of(context).primaryColor,
