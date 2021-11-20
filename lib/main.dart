@@ -7,7 +7,6 @@ import 'package:room_quickly/screens/onboarding_screen.dart';
 import 'package:room_quickly/services/blocs.dart';
 import 'models/user_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
 import 'screens/home_page.dart';
 
 BuildContext globalContext;

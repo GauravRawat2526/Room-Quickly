@@ -5,6 +5,7 @@ import 'package:room_quickly/models/user_data.dart';
 import 'package:room_quickly/screens/add_rooms.dart';
 import 'package:room_quickly/screens/chat_screen.dart';
 import 'package:room_quickly/screens/pg_hostel_screen.dart';
+import 'package:room_quickly/screens/rooms_screen.dart';
 import '../widgets/app_drawer.dart';
 import '../services/firestore_service.dart';
 import 'package:firebase_auth/firebase_auth.dart';
