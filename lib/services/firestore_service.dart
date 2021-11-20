@@ -26,16 +26,22 @@ class FireStoreService {
   //     'imageUrl': imagePath
   //   });
   // }
-  
-  static Future addUser(String userName, String emailUser, String fullName,
-      String address, String upidName, String phoneNumber, String imagePath) async {
+
+  static Future addUser(
+      String userName,
+      String emailUser,
+      String fullName,
+      String address,
+      String upidName,
+      String phoneNumber,
+      String imagePath) async {
     print(imagePath);
     _firestore.collection('users').doc(userName).set({
       'userName': userName,
       'email': emailUser,
       'name': fullName,
       'address': address,
-      'upid' : upidName,
+      'upid': upidName,
       'imageUrl': imagePath,
       'phoneNumber': phoneNumber
     });
@@ -102,5 +108,21 @@ class FireStoreService {
     final document =
         await _firestore.collection('GroupChatRoom').doc(groupName).get();
     return document.exists;
+  }
+
+  static Future getPgByCity(var cityName) async {
+    return await _firestore
+        .collection('PGs and Hostels')
+        .doc(cityName)
+        .collection(cityName + "Details")
+        .get();
+  }
+
+  static Future getRoomByCity(var cityName) async {
+    return await _firestore
+        .collection('Rooms')
+        .doc(cityName)
+        .collection(cityName + "Details")
+        .get();
   }
 }

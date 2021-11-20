@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:room_quickly/models/user_data.dart';
+import 'package:room_quickly/screens/add_rooms.dart';
 import '../services/phone_auth.dart';
 // import '../screen/profile_screen.dart';
 import 'package:provider/provider.dart';
@@ -46,6 +47,7 @@ class AppDrawer extends StatelessWidget {
               color: Theme.of(context).primaryColor,
             ),
             title: Text("Add hostel/pg/Rooms"),
+            onTap: () => Navigator.of(context).pushNamed(AddRoom.routeName),
             trailing: Icon(
               Icons.keyboard_arrow_right,
               color: Theme.of(context).primaryColor,

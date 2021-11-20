@@ -4,10 +4,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:room_quickly/screens/loadingScreen.dart';
 import 'package:room_quickly/screens/login_screen.dart';
 import 'package:room_quickly/screens/onboarding_screen.dart';
+import 'package:room_quickly/screens/room_details.dart';
 import 'package:room_quickly/services/blocs.dart';
 import 'models/user_data.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import 'screens/add_rooms.dart';
 import 'screens/home_page.dart';
 
 BuildContext globalContext;
@@ -50,7 +52,8 @@ class MyApp extends StatelessWidget {
           RoutingScreen.routeName: (_) => RoutingScreen(),
           LoginScreen.routeName: (_) => LoginScreen(),
           HomePage.routeName: (_) => HomePage(),
-          OnboardingScreen.routeName: (_) => OnboardingScreen()
+          OnboardingScreen.routeName: (_) => OnboardingScreen(),
+          AddRoom.routeName: (_) => AddRoom(),
         },
       ),
     );
@@ -73,7 +76,7 @@ class _RoutingScreenState extends State<RoutingScreen> {
     super.initState();
     checkUser();
   }
-  
+
   checkUser() async {
     await Future.delayed(Duration(seconds: 1));
     print(FirebaseAuth.instance.currentUser);
