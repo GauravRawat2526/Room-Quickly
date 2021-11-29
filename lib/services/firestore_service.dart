@@ -91,4 +91,20 @@ class FireStoreService {
         await _firestore.collection('GroupChatRoom').doc(groupName).get();
     return document.exists;
   }
+
+  static Future getPgByCity(var cityName) async {
+    return await _firestore
+        .collection('PGs and Hostels')
+        .doc(cityName)
+        .collection(cityName + "Details")
+        .get();
+  }
+
+  static Future getRoomByCity(var cityName) async {
+    return await _firestore
+        .collection('Rooms')
+        .doc(cityName)
+        .collection(cityName + "Details")
+        .get();
+  }
 }

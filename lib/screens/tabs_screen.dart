@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:room_quickly/models/user_data.dart';
-import 'package:room_quickly/screens/add_rooms.dart';
 import 'package:room_quickly/screens/chat_screen.dart';
 import 'package:room_quickly/screens/pg_hostel_screen.dart';
 import 'package:room_quickly/screens/rooms_screen.dart';
@@ -25,9 +24,8 @@ class _TabsScreenState extends State<TabsScreen> {
   void initState() {
     _scrAndName = [
       {'screen': PgHostelScreen(), 'name': 'PgHostelScreen'},
-      {'screen': AddRoom(), 'name': 'RoomsScreen'},
       // {'screen': SearchScreen(), 'name': 'Favourites'},
-     // {'screen': AddRoom(), 'name': 'StatusScreen'},
+      // {'screen': AddRoom(), 'name': 'StatusScreen'},
       {'screen': RoomsScreen(), 'name': 'RoomsScreen'},
       {'screen': ChatScreen(), 'name': 'ChatScreen'},
       // {'screen': StatusScreen(), 'name': 'StatusScreen'},
@@ -41,7 +39,7 @@ class _TabsScreenState extends State<TabsScreen> {
             userData['imageUrl'],
             userData['phoneNumber'],
             userData['email'],
-            userData['upid']);
+            userData['upid'],);
         setState(() {
           isLoading = false;
         });
@@ -78,7 +76,7 @@ class _TabsScreenState extends State<TabsScreen> {
       drawer: isLoading ? null : AppDrawer(),
       body: isLoading
           ? SpinKitWave(color: Theme.of(context).primaryColor)
-          :_scrAndName[_selectedPageIndex]['screen'],
+          : _scrAndName[_selectedPageIndex]['screen'],
       bottomNavigationBar: CurvedNavigationBar(
           index: _selectedPageIndex,
           color: Theme.of(context).primaryColor,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:room_quickly/models/user_data.dart';
 import 'package:room_quickly/screens/profile_screen.dart';
 import 'package:room_quickly/screens/update_rooms.dart';
+import 'package:room_quickly/screens/add_rooms.dart';
 import '../services/phone_auth.dart';
 // import '../screen/profile_screen.dart';
 import 'package:provider/provider.dart';
@@ -54,7 +55,34 @@ class AppDrawer extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                       builder: (BuildContext context) => UpdateRooms()));
+              
             },
+
+            // title: Text("Add hostel/pg/Rooms"),
+            // onTap: () => Navigator.of(context).pushNamed(AddRoom.routeName),
+            trailing: Icon(
+              Icons.keyboard_arrow_right,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.add_business_outlined,
+              color: Theme.of(context).primaryColor,
+            ),
+            // title: Text("Remove hostel/pg/Rooms"),
+            // onTap: () {
+            //   Navigator.of(context).pop();
+            //   Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //           builder: (BuildContext context) => UpdateRooms()));
+            // },
+            title: Text("Add hostel/pg/Rooms"),
+            onTap: () => Navigator.of(context).pushNamed(AddRoom.routeName),
             trailing: Icon(
               Icons.keyboard_arrow_right,
               color: Theme.of(context).primaryColor,
