@@ -107,4 +107,26 @@ class FireStoreService {
         .collection(cityName + "Details")
         .get();
   }
+
+  static void bookRoom(userName, roomName, price, photos) async {
+    var data = {
+      'userName': userName,
+      'roomName': roomName,
+      'price': price,
+      'photos': photos[0]
+    };
+    await _firestore
+        .collection('users')
+        .doc(userName)
+        .collection("Booked Rooms")
+        .add(data);
+  }
+
+  static getBookedRooms(String s, String userName) async {
+    return _firestore
+        .collection(s)
+        .doc(userName)
+        .collection('Booked Rooms')
+        .snapshots();
+  }
 }

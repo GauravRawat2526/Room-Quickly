@@ -194,26 +194,28 @@ class _RoomDetailsState extends State<RoomDetails> {
                   }),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  isLoading
-                      ? CircularProgressIndicator()
-                      : ElevatedButton(
-                          onPressed: () {
-                            createChatRoom(context);
-                          },
-                          child: Text('Chat With Owner')),
-                  SizedBox(
-                    width: 40,
-                  ),
-                  ElevatedButton(
-                      onPressed: () {
-                        initiateTransaction();
-                      },
-                      child: Text('Book'))
-                ],
-              )
+              if (widget.userName !=
+                  Provider.of<UserData>(context, listen: false).userName)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    isLoading
+                        ? CircularProgressIndicator()
+                        : ElevatedButton(
+                            onPressed: () {
+                              createChatRoom(context);
+                            },
+                            child: Text('Chat With Owner')),
+                    SizedBox(
+                      width: 40,
+                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          initiateTransaction();
+                        },
+                        child: Text('Book'))
+                  ],
+                )
             ],
           ),
         ),
@@ -223,9 +225,14 @@ class _RoomDetailsState extends State<RoomDetails> {
 
   initiateTransaction() async {
     String upi_url =
-        'upi://pay?pa=ayushyadav685@okicici&pn=Ayush Yadav&am=1&cu=INR';
+        'upi://pay?pa=ayushyadav685@okicici&pn=${widget.userName}&am=${widget.price}&cu=INR';
     await launch(upi_url).then((value) {
       print(value);
     }).catchError((err) => print(err));
+    await FireStoreService.bookRoom(
+        Provider.of<UserData>(context, listen: false).userName,
+        widget.roomName,
+        widget.price,
+        widget.photos);
   }
 }

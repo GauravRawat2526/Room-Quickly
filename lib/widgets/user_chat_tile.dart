@@ -21,6 +21,7 @@ class _UserChatTileState extends State<UserChatTile> {
   @override
   void initState() {
     FireStoreService.searchUserByUsername(widget.userName).then((value) {
+      print(value['imageUrl']);
       imageUrl = value['imageUrl'];
       // aboutUser = value['aboutUser'];
       name = value['userName'];

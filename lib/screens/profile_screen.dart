@@ -119,8 +119,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   userData.setUserData(
                                       _userName.text,
                                       _fullName.text,
-                                      userData.phoneNumber,
                                       _uploadFileURL,
+                                      userData.phoneNumber,
                                       _emailUser.text,
                                       _upidName.text);
                                   FireStoreService.addUser(
@@ -462,8 +462,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 userData.setUserData(
                                     _userName.text,
                                     _fullName.text,
-                                    userData.phoneNumber,
                                     _uploadFileURL,
+                                    userData.phoneNumber,
                                     _emailUser.text,
                                     _upidName.text);
                                 FireStoreService.addUser(
@@ -543,8 +543,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 userData.setUserData(
                                     _userName.text,
                                     _fullName.text,
-                                    userData.phoneNumber,
                                     _uploadFileURL,
+                                    userData.phoneNumber,
                                     _emailUser.text,
                                     _upidName.text);
                                 FireStoreService.addUser(
@@ -629,8 +629,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 userData.setUserData(
                                     _userName.text,
                                     _fullName.text,
-                                    userData.phoneNumber,
                                     _uploadFileURL,
+                                    userData.phoneNumber,
                                     _emailUser.text,
                                     _upidName.text);
                                 FireStoreService.addUser(
