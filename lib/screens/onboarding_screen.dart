@@ -93,13 +93,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             SizedBox(height: 25.0),
-                            Text('Connect people\naround the world',
+                            Text('Connect and find rooms \neasily',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 20,
                                     color: Colors.deepOrange)),
                             SizedBox(height: 15.0),
-                            Text('Start chating with your friends.',
+                            Text('Chat Directly with room owner.',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 15,
@@ -120,13 +120,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             SizedBox(height: 25.0),
-                            Text('Share your status',
+                            Text('Find Rooms by city',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 20,
                                     color: Colors.purple)),
                             SizedBox(height: 15.0),
-                            Text('See your friend\'s status',
+                            Text('',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 15,

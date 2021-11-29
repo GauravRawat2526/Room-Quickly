@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:room_quickly/models/user_data.dart';
 import 'package:room_quickly/screens/add_rooms.dart';
+import 'package:room_quickly/screens/booked_rooms.dart';
 import '../services/phone_auth.dart';
 // import '../screen/profile_screen.dart';
 import 'package:provider/provider.dart';
+import 'package:room_quickly/screens/booked_rooms.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -58,6 +60,22 @@ class AppDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.logout, color: Theme.of(context).primaryColor),
+            title: Text('Booked Rooms'),
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+                return BookedRooms();
+              }));
+            },
+            trailing: Icon(
+              Icons.keyboard_arrow_right,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            leading: Icon(Icons.logout, color: Theme.of(context).primaryColor),
             title: Text('Logout'),
             onTap: () {
               PhoneAuth.logout(context);
@@ -66,7 +84,7 @@ class AppDrawer extends StatelessWidget {
               Icons.keyboard_arrow_right,
               color: Theme.of(context).primaryColor,
             ),
-          ),
+          )
         ],
       ),
     );
