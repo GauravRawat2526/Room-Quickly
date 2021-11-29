@@ -37,7 +37,6 @@ class RoomDetails extends StatefulWidget {
 
 class _RoomDetailsState extends State<RoomDetails> {
   var isLoading = false;
-
   createChatRoom(BuildContext context) async {
     final myName = Provider.of<UserData>(context, listen: false).userName;
     List<String> users = [widget.userName, myName];
@@ -102,9 +101,11 @@ class _RoomDetailsState extends State<RoomDetails> {
                   SizedBox(
                     width: 55,
                   ),
-                  Text(
-                    widget.address,
-                    style: Theme.of(context).textTheme.subtitle1,
+                  Flexible(
+                    child: Text(
+                      widget.address,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
                   )
                 ],
               ),
@@ -120,9 +121,11 @@ class _RoomDetailsState extends State<RoomDetails> {
                   SizedBox(
                     width: 25,
                   ),
-                  Text(
-                    widget.email,
-                    style: Theme.of(context).textTheme.subtitle1,
+                  Flexible(
+                    child: Text(
+                      widget.email,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
                   )
                 ],
               ),
@@ -138,9 +141,11 @@ class _RoomDetailsState extends State<RoomDetails> {
                   SizedBox(
                     width: 25,
                   ),
-                  Text(
-                    widget.phoneNumber,
-                    style: Theme.of(context).textTheme.subtitle1,
+                  Flexible(
+                    child: Text(
+                      widget.phoneNumber,
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
                   )
                 ],
               ),
@@ -156,9 +161,11 @@ class _RoomDetailsState extends State<RoomDetails> {
                   SizedBox(
                     width: 25,
                   ),
-                  Text(
-                    'RS ${widget.price}',
-                    style: Theme.of(context).textTheme.subtitle1,
+                  Flexible(
+                    child: Text(
+                      'RS ${widget.price}',
+                      style: Theme.of(context).textTheme.subtitle1,
+                    ),
                   )
                 ],
               ),

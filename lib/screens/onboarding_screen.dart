@@ -93,13 +93,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             SizedBox(height: 25.0),
-                            Text('Connect and find rooms \neasily',
+                            Text('Find the best PGs,Hostels and Hotels near by you',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 20,
                                     color: Colors.deepOrange)),
                             SizedBox(height: 15.0),
-                            Text('Chat Directly with room owner.',
+                            Text('Start searching the PGs,Hostels and Hotels near your city.',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 15,
@@ -120,13 +120,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             SizedBox(height: 25.0),
-                            Text('Find Rooms by city',
+                            Text('Add PGs,Hostels and Hotels rooms easily',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 20,
                                     color: Colors.purple)),
                             SizedBox(height: 15.0),
-                            Text('',
+                            Text('Stop sharing your profit with Brokers',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 15,
@@ -147,13 +147,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ),
                             ),
                             SizedBox(height: 25.0),
-                            Text('Draw and Share doodles with your friends',
+                            Text('Book PGs, Hostels and Hotels Room easily',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 20,
                                     color: Colors.blue[900])),
                             SizedBox(height: 15.0),
-                            Text('show your creativity with your friends',
+                            Text('Enjoy a Fabulous hospitality',
                                 style: TextStyle(
                                     fontFamily: "Arial Rounded",
                                     fontSize: 15,

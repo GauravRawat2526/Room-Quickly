@@ -21,8 +21,8 @@ class Blocs{
   Stream<double> get amount =>_address.stream.transform(validateAmount);
   Stream<String> get upidName =>_upidName.stream.transform(validateUpidName);
   Stream<bool> get addValid => Rx.combineLatest3(fullName, address, amount, (fullName, address, amount) => true);
-  Stream<bool> get userValid => Rx.combineLatest5(userName, emailUser, fullName, address, upidName, (userName, emailUser, fullName, address, upidName) => true);
-  Stream<bool> get changeValid => Rx.combineLatest4(emailUser, fullName, address, upidName, (emailUser, fullName, address, upidName) => true);
+  Stream<bool> get userValid => Rx.combineLatest4(userName, emailUser, fullName, upidName, (userName, emailUser, fullName, upidName) => true);
+  Stream<bool> get changeValid => Rx.combineLatest3(emailUser, fullName, upidName, (emailUser, fullName,  upidName) => true);
   //Stream<bool> get invalidName =>Rx.combineLatest( fullName, (fullName) => null);
   
   //Set

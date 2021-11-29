@@ -7,17 +7,15 @@ class UserData extends ChangeNotifier {
   String _phoneNumber;
   String _email;
   String _upid;
-  String _address;
 
   void setUserData(String userName, String name, String imageUrl,
-      String phoneNumber, String email, String upid, String address) {
+      String phoneNumber, String email, String upid) {
     _userName = userName;
     _name = name;
     _imageUrl = imageUrl;
     _phoneNumber = phoneNumber;
     _email = email;
     _upid = upid;
-    _address = address;
     notifyListeners();
   }
 
@@ -41,11 +39,9 @@ class UserData extends ChangeNotifier {
     return _email;
   }
 
+
   String get upid {
     return _upid;
   }
 
-  String get address {
-    _address = address;
-  }
 }

@@ -268,6 +268,7 @@ class _AddRoomState extends State<AddRoom> {
                                           'userPhone': userData.phoneNumber,
                                         });
                                         print(_amount);
+                                        print(userData.phoneNumber);
                                         await _firestore
                                             .collection(_currentItemSelected)
                                             .doc(_currentCitySelected)

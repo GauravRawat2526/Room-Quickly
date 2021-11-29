@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:room_quickly/models/user_data.dart';
+import 'package:room_quickly/screens/profile_screen.dart';
+import 'package:room_quickly/screens/update_rooms.dart';
 import 'package:room_quickly/screens/add_rooms.dart';
 import 'package:room_quickly/screens/booked_rooms.dart';
 import '../services/phone_auth.dart';
@@ -28,13 +30,13 @@ class AppDrawer extends StatelessWidget {
               color: Theme.of(context).primaryColor,
             ),
             title: Text('Edit Profile'),
-            // onTap: () {
-            //   Navigator.of(context).pop();
-            //   Navigator.push(
-            //       context,
-            //       MaterialPageRoute(
-            //           builder: (BuildContext context) => ProfileScreen()));
-            // },
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => ProfileScreen()));
+            },
             trailing: Icon(
               Icons.keyboard_arrow_right,
               color: Theme.of(context).primaryColor,
@@ -48,6 +50,39 @@ class AppDrawer extends StatelessWidget {
               Icons.add_business_outlined,
               color: Theme.of(context).primaryColor,
             ),
+            title: Text("Remove hostel/pg/Rooms"),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext context) => UpdateRooms()));
+              
+            },
+
+            // title: Text("Add hostel/pg/Rooms"),
+            // onTap: () => Navigator.of(context).pushNamed(AddRoom.routeName),
+            trailing: Icon(
+              Icons.keyboard_arrow_right,
+              color: Theme.of(context).primaryColor,
+            ),
+          ),
+          Divider(
+            color: Colors.black,
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.add_business_outlined,
+              color: Theme.of(context).primaryColor,
+            ),
+            // title: Text("Remove hostel/pg/Rooms"),
+            // onTap: () {
+            //   Navigator.of(context).pop();
+            //   Navigator.push(
+            //       context,
+            //       MaterialPageRoute(
+            //           builder: (BuildContext context) => UpdateRooms()));
+            // },
             title: Text("Add hostel/pg/Rooms"),
             onTap: () => Navigator.of(context).pushNamed(AddRoom.routeName),
             trailing: Icon(
